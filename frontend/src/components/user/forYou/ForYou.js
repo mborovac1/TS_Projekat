@@ -46,7 +46,6 @@ const ForYou = () => {
   const fetchFilms = async () => {
     if (filmovi.length > 0) {
       setFilms(korisnik.karte.map((karta) => karta.film));
-      console.log("FILMS", films);
 
       // Filter out null values from films array
       const filteredFilms = films.filter((film) => film !== null);
@@ -107,9 +106,6 @@ const ForYou = () => {
     else
         setFilteredMovies([]);
   };
-
-  //const filteredContent = selectedGenres.length > 0 ? filteredMovies : filmovi;
-  //console.log("Filtrirano", filteredContent);
 
   return (
     <div>

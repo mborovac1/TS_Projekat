@@ -39,11 +39,6 @@ const Ticket = () => {
         const response = await axios.get(`${BASE_URL}/film/${idFilma}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
-        console.log(
-          "ISPIS",
-          response.data.sale.map((e) => e.brojSale),
-          response.data.sale.map((e) => e.id)
-        );
         let salaIzOdgovora = response.data.sale.map((e) => e.brojSale);
         let idSaleIzOdgovora = response.data.sale.map((e) => e.id);
         setSaleAll(response.data.sale);
