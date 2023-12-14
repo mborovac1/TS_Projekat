@@ -14,7 +14,7 @@ const Movies = () => {
   const [filteredMovies, setFilteredMovies] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8081/filmovi")
+    fetch("http://10.0.2.162:8081/filmovi")
       .then((res) => res.json())
       .then((result) => {
         setFilmovi(result);

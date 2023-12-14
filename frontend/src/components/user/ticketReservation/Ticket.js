@@ -21,7 +21,7 @@ const Ticket = () => {
   const fetchSjedistaOdabraneSale = async (trenutnaSala) => {
     const token = localStorage.getItem("access_token");
     try {
-      const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:8081";
+      const BASE_URL = process.env.REACT_APP_BASE_URL || "http://10.0.2.162:8081";
       const response = await axios.get(`${BASE_URL}/sala/${trenutnaSala}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -35,7 +35,7 @@ const Ticket = () => {
     const fetchSale = async () => {
       const token = localStorage.getItem("access_token");
       try {
-        const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:8081";
+        const BASE_URL = process.env.REACT_APP_BASE_URL || "http://10.0.2.162:8081";
         const response = await axios.get(`${BASE_URL}/film/${idFilma}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
@@ -83,7 +83,7 @@ const Ticket = () => {
       const fetchKorisnik = async () => {
         const token = localStorage.getItem("access_token");
         try {
-          const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:8081";
+          const BASE_URL = process.env.REACT_APP_BASE_URL || "http://10.0.2.162:8081";
           const response = await axios.get(`${BASE_URL}/korisnik/email/${email}`, {
             headers: { Authorization: `Bearer ${token}` },
           });
@@ -98,7 +98,7 @@ const Ticket = () => {
       const submitSjedista = async () => {
         const token = localStorage.getItem("access_token");
         try {
-          const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:8081";
+          const BASE_URL = process.env.REACT_APP_BASE_URL || "http://10.0.2.162:8081";
           const response = await axios.post(`${BASE_URL}/dodajSjediste/${izabranaSalaId}`, post, { headers: { Authorization: `Bearer ${token}` } });
         } catch (error) {
           console.error("Failed to fetch sjedista:", error);
@@ -108,7 +108,7 @@ const Ticket = () => {
       const submitKartu = async () => {
         const token = localStorage.getItem("access_token");
         try {
-          const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:8081";
+          const BASE_URL = process.env.REACT_APP_BASE_URL || "http://10.0.2.162:8081";
 
           const response = await axios.post(`${BASE_URL}/dodajKartu/${kor}/${idFilma}/${izabranaSalaId}/${odabrana[i]}`, post, { headers: { Authorization: `Bearer ${token}` } });
         } catch (error) {

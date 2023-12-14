@@ -29,7 +29,7 @@ const PasswordChangeModal = ({ open, onClose }) => {
             
         const token = localStorage.getItem("access_token");
         const email = localStorage.getItem("email");
-        const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:8081";
+        const BASE_URL = process.env.REACT_APP_BASE_URL || "http://10.0.2.162:8081";
 
         const requestBody = {
             email: email,
@@ -132,7 +132,7 @@ const Profile = () => {
     const fetchUser = async () => {
       const token = localStorage.getItem("access_token");
       try {
-        const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:8081";
+        const BASE_URL = process.env.REACT_APP_BASE_URL || "http://10.0.2.162:8081";
         const response = await axios.get(`${BASE_URL}/user/email/${email}`, {
           headers: { Authorization: `Bearer ${token}` },
         });

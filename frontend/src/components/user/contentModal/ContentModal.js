@@ -50,7 +50,7 @@ export default function ContentModal({ children, id }) {
     const fetchFilmovi = async () => {
       const token = localStorage.getItem("access_token");
       try {
-        const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:8081";
+        const BASE_URL = process.env.REACT_APP_BASE_URL || "http://10.0.2.162:8081";
         const response = await axios.get(`${BASE_URL}/filmovi`, {
           headers: { Authorization: `Bearer ${token}` },
         });

@@ -46,7 +46,7 @@ export default function AddMovie() {
 
     const token = localStorage.getItem("access_token");
     try {
-      const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:8081";
+      const BASE_URL = process.env.REACT_APP_BASE_URL || "http://10.0.2.162:8081";
       const response = await axios.post(`${BASE_URL}/dodajFilm`, film, {
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -83,7 +83,7 @@ export default function AddMovie() {
     const fetchFilmovi = async () => {
       const token = localStorage.getItem("access_token");
       try {
-        const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:8081";
+        const BASE_URL = process.env.REACT_APP_BASE_URL || "http://10.0.2.162:8081";
         const response = await axios.get(`${BASE_URL}/filmovi`, {
           headers: { Authorization: `Bearer ${token}` },
         });
@@ -96,7 +96,7 @@ export default function AddMovie() {
     const fetchZanrovi = async () => {
       const token = localStorage.getItem("access_token");
       try {
-        const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:8081";
+        const BASE_URL = process.env.REACT_APP_BASE_URL || "http://10.0.2.162:8081";
         const response = await axios.get(`${BASE_URL}/zanrovi/`, {
           headers: { Authorization: `Bearer ${token}` },
         });
@@ -113,7 +113,7 @@ export default function AddMovie() {
     const fetchSale = async () => {
       const token = localStorage.getItem("access_token");
       try {
-        const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:8081";
+        const BASE_URL = process.env.REACT_APP_BASE_URL || "http://10.0.2.162:8081";
         const response = await axios.get(`${BASE_URL}/sale`, {
           headers: { Authorization: `Bearer ${token}` },
         });

@@ -15,7 +15,7 @@ const Genres = ({ selectedGenres, setSelectedGenres, genres, setGenres, onGenreS
   };
 
   useEffect(() => {
-    fetch("http://localhost:8081/zanrovi/")
+    fetch("http://10.0.2.162:8081/zanrovi/")
       .then((res) => res.json())
       .then((result) => {
         setGenres(result);

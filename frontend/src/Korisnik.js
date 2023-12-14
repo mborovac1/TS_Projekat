@@ -24,7 +24,7 @@ export default function Korisnik() {
       spol,
     };
     
-    fetch("http://localhost:8080/dodajKorisnika", {
+    fetch("http://10.0.2.162:8080/dodajKorisnika", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(korisnik),
@@ -34,7 +34,7 @@ export default function Korisnik() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:8080/korisnici")
+    fetch("http://10.0.2.162:8080/korisnici")
       .then((res) => res.json())
       .then((result) => {
         setKorisnici(result);
